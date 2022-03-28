@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.0 on win32)" generated="20220328 13:47:48.494" rpa="false" schemaversion="2">
+<suite id="s1" name="registerTest" source="C:\Users\user\Desktop\Dojobox\demoBlaze\registerTest.robot">
+<test id="s1-t1" name="Login with blank username and blank password">
+<kw name="Open Browser Chrome" library="registerKeywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220328 13:47:48.879" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220328 13:47:48.879" endtime="20220328 13:47:50.536"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220328 13:47:50.536" endtime="20220328 13:47:50.664"/>
+</kw>
+<status status="PASS" starttime="20220328 13:47:48.878" endtime="20220328 13:47:50.664"/>
+</kw>
+<kw name="Navigate to Demo Blaze Page" library="registerKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${base_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220328 13:47:50.666" level="INFO">Opening url 'https://www.demoblaze.com/index.html'</msg>
+<status status="PASS" starttime="20220328 13:47:50.665" endtime="20220328 13:47:52.736"/>
+</kw>
+<status status="PASS" starttime="20220328 13:47:50.665" endtime="20220328 13:47:52.737"/>
+</kw>
+<kw name="Navigate to Sign Up Menu" library="registerKeywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Sign up</arg>
+<arg>5seconds</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220328 13:47:52.738" endtime="20220328 13:47:52.764"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sign_up_menu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 13:47:52.765" level="INFO">Clicking element '//a[@id="signin2"]'.</msg>
+<status status="PASS" starttime="20220328 13:47:52.764" endtime="20220328 13:47:52.836"/>
+</kw>
+<status status="PASS" starttime="20220328 13:47:52.737" endtime="20220328 13:47:52.837"/>
+</kw>
+<kw name="Click Sign Up Button" library="registerKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${sign_up_button}</arg>
+<arg>5seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220328 13:47:52.838" endtime="20220328 13:47:53.133"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sign_up_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 13:47:53.134" level="INFO">Clicking element '//button[@onclick="register()"]'.</msg>
+<status status="PASS" starttime="20220328 13:47:53.133" endtime="20220328 13:47:53.218"/>
+</kw>
+<status status="PASS" starttime="20220328 13:47:52.838" endtime="20220328 13:47:53.218"/>
+</kw>
+<kw name="Confirm fill out Alert Present" library="registerKeywords">
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Please fill out Username and Password.</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20220328 13:47:53.220" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20220328 13:47:53.220" endtime="20220328 13:47:53.226"/>
+</kw>
+<status status="PASS" starttime="20220328 13:47:53.219" endtime="20220328 13:47:53.226"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220328 13:47:53.227" endtime="20220328 13:47:55.454"/>
+</kw>
+<status status="PASS" starttime="20220328 13:47:48.877" endtime="20220328 13:47:55.455"/>
+</test>
+<test id="s1-t2" name="Login with blank username and valid password">
+<kw name="Open Browser Chrome" library="registerKeywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220328 13:47:55.460" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220328 13:47:55.459" endtime="20220328 13:47:56.990"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220328 13:47:56.990" endtime="20220328 13:47:57.120"/>
+</kw>
+<status status="PASS" starttime="20220328 13:47:55.459" endtime="20220328 13:47:57.121"/>
+</kw>
+<kw name="Navigate to Demo Blaze Page" library="registerKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${base_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220328 13:47:57.123" level="INFO">Opening url 'https://www.demoblaze.com/index.html'</msg>
+<status status="PASS" starttime="20220328 13:47:57.123" endtime="20220328 13:47:58.458"/>
+</kw>
+<status status="PASS" starttime="20220328 13:47:57.122" endtime="20220328 13:47:58.458"/>
+</kw>
+<kw name="Navigate to Sign Up Menu" library="registerKeywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Sign up</arg>
+<arg>5seconds</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220328 13:47:58.460" endtime="20220328 13:47:58.490"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sign_up_menu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 13:47:58.490" level="INFO">Clicking element '//a[@id="signin2"]'.</msg>
+<status status="PASS" starttime="20220328 13:47:58.490" endtime="20220328 13:47:58.565"/>
+</kw>
+<status status="PASS" starttime="20220328 13:47:58.460" endtime="20220328 13:47:58.566"/>
+</kw>
+<kw name="Input Password" library="registerKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${password_txtbox}</arg>
+<arg>5seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220328 13:47:58.570" endtime="20220328 13:47:58.893"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_txtbox}</arg>
+<arg>ganjar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220328 13:47:58.894" level="INFO">Typing text 'ganjar' into text field '//input[@id="sign-password"]'.</msg>
+<status status="PASS" starttime="20220328 13:47:58.893" endtime="20220328 13:47:59.035"/>
+</kw>
+<status status="PASS" starttime="20220328 13:47:58.569" endtime="20220328 13:47:59.036"/>
+</kw>
+<kw name="Click Sign Up Button" library="registerKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${sign_up_button}</arg>
+<arg>5seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220328 13:47:59.037" endtime="20220328 13:47:59.070"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sign_up_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 13:47:59.071" level="INFO">Clicking element '//button[@onclick="register()"]'.</msg>
+<status status="PASS" starttime="20220328 13:47:59.070" endtime="20220328 13:47:59.206"/>
+</kw>
+<status status="PASS" starttime="20220328 13:47:59.036" endtime="20220328 13:47:59.207"/>
+</kw>
+<kw name="Confirm fill out Alert Present" library="registerKeywords">
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Please fill out Username and Password.</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20220328 13:47:59.210" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20220328 13:47:59.209" endtime="20220328 13:47:59.252"/>
+</kw>
+<status status="PASS" starttime="20220328 13:47:59.208" endtime="20220328 13:47:59.253"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220328 13:47:59.254" endtime="20220328 13:48:01.520"/>
+</kw>
+<status status="PASS" starttime="20220328 13:47:55.457" endtime="20220328 13:48:01.521"/>
+</test>
+<test id="s1-t3" name="Login with valid username and blank password">
+<kw name="Open Browser Chrome" library="registerKeywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220328 13:48:01.526" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220328 13:48:01.525" endtime="20220328 13:48:03.036"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220328 13:48:03.036" endtime="20220328 13:48:03.165"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:01.525" endtime="20220328 13:48:03.166"/>
+</kw>
+<kw name="Navigate to Demo Blaze Page" library="registerKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${base_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220328 13:48:03.168" level="INFO">Opening url 'https://www.demoblaze.com/index.html'</msg>
+<status status="PASS" starttime="20220328 13:48:03.167" endtime="20220328 13:48:04.270"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:03.167" endtime="20220328 13:48:04.270"/>
+</kw>
+<kw name="Navigate to Sign Up Menu" library="registerKeywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Sign up</arg>
+<arg>5seconds</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220328 13:48:04.271" endtime="20220328 13:48:04.290"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sign_up_menu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 13:48:04.291" level="INFO">Clicking element '//a[@id="signin2"]'.</msg>
+<status status="PASS" starttime="20220328 13:48:04.291" endtime="20220328 13:48:04.362"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:04.271" endtime="20220328 13:48:04.362"/>
+</kw>
+<kw name="Input Username" library="registerKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${username_txtbox}</arg>
+<arg>5seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220328 13:48:04.364" endtime="20220328 13:48:04.628"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_txtbox}</arg>
+<arg>ganjar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220328 13:48:04.629" level="INFO">Typing text 'ganjar' into text field '//input[@id="sign-username"]'.</msg>
+<status status="PASS" starttime="20220328 13:48:04.628" endtime="20220328 13:48:04.804"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:04.363" endtime="20220328 13:48:04.805"/>
+</kw>
+<kw name="Click Sign Up Button" library="registerKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${sign_up_button}</arg>
+<arg>5seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220328 13:48:04.806" endtime="20220328 13:48:04.856"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sign_up_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 13:48:04.857" level="INFO">Clicking element '//button[@onclick="register()"]'.</msg>
+<status status="PASS" starttime="20220328 13:48:04.856" endtime="20220328 13:48:04.942"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:04.806" endtime="20220328 13:48:04.943"/>
+</kw>
+<kw name="Confirm fill out Alert Present" library="registerKeywords">
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Please fill out Username and Password.</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20220328 13:48:04.945" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20220328 13:48:04.945" endtime="20220328 13:48:04.953"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:04.944" endtime="20220328 13:48:04.954"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220328 13:48:04.955" endtime="20220328 13:48:07.188"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:01.524" endtime="20220328 13:48:07.189"/>
+</test>
+<test id="s1-t4" name="Login with valid username and valid password">
+<kw name="Open Browser Chrome" library="registerKeywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220328 13:48:07.194" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220328 13:48:07.193" endtime="20220328 13:48:08.775"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220328 13:48:08.776" endtime="20220328 13:48:08.902"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:07.193" endtime="20220328 13:48:08.903"/>
+</kw>
+<kw name="Navigate to Demo Blaze Page" library="registerKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${base_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220328 13:48:08.904" level="INFO">Opening url 'https://www.demoblaze.com/index.html'</msg>
+<status status="PASS" starttime="20220328 13:48:08.904" endtime="20220328 13:48:10.087"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:08.903" endtime="20220328 13:48:10.088"/>
+</kw>
+<kw name="Navigate to Sign Up Menu" library="registerKeywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Sign up</arg>
+<arg>5seconds</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220328 13:48:10.089" endtime="20220328 13:48:10.109"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sign_up_menu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 13:48:10.110" level="INFO">Clicking element '//a[@id="signin2"]'.</msg>
+<status status="PASS" starttime="20220328 13:48:10.109" endtime="20220328 13:48:10.274"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:10.088" endtime="20220328 13:48:10.274"/>
+</kw>
+<kw name="Input Username" library="registerKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${username_txtbox}</arg>
+<arg>5seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220328 13:48:10.275" endtime="20220328 13:48:10.580"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_txtbox}</arg>
+<arg>ganjar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220328 13:48:10.581" level="INFO">Typing text 'ganjar' into text field '//input[@id="sign-username"]'.</msg>
+<status status="PASS" starttime="20220328 13:48:10.580" endtime="20220328 13:48:10.740"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:10.275" endtime="20220328 13:48:10.740"/>
+</kw>
+<kw name="Input Password" library="registerKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${password_txtbox}</arg>
+<arg>5seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220328 13:48:10.742" endtime="20220328 13:48:10.775"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_txtbox}</arg>
+<arg>ganjar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220328 13:48:10.777" level="INFO">Typing text 'ganjar' into text field '//input[@id="sign-password"]'.</msg>
+<status status="PASS" starttime="20220328 13:48:10.776" endtime="20220328 13:48:10.895"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:10.741" endtime="20220328 13:48:10.895"/>
+</kw>
+<kw name="Click Sign Up Button" library="registerKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${sign_up_button}</arg>
+<arg>5seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220328 13:48:10.897" endtime="20220328 13:48:10.926"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sign_up_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 13:48:10.927" level="INFO">Clicking element '//button[@onclick="register()"]'.</msg>
+<status status="PASS" starttime="20220328 13:48:10.926" endtime="20220328 13:48:11.023"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:10.896" endtime="20220328 13:48:11.023"/>
+</kw>
+<kw name="Confirm successfull Alert Present" library="registerKeywords">
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Sign up successful.</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20220328 13:48:11.025" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20220328 13:48:11.025" endtime="20220328 13:48:12.056"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:11.024" endtime="20220328 13:48:12.056"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220328 13:48:12.058" endtime="20220328 13:48:14.348"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:07.192" endtime="20220328 13:48:14.349"/>
+</test>
+<test id="s1-t5" name="Login with already registered username and password">
+<kw name="Open Browser Chrome" library="registerKeywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220328 13:48:14.354" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220328 13:48:14.353" endtime="20220328 13:48:15.955"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220328 13:48:15.955" endtime="20220328 13:48:16.084"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:14.353" endtime="20220328 13:48:16.085"/>
+</kw>
+<kw name="Navigate to Demo Blaze Page" library="registerKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${base_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220328 13:48:16.088" level="INFO">Opening url 'https://www.demoblaze.com/index.html'</msg>
+<status status="PASS" starttime="20220328 13:48:16.087" endtime="20220328 13:48:19.537"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:16.086" endtime="20220328 13:48:19.537"/>
+</kw>
+<kw name="Navigate to Sign Up Menu" library="registerKeywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Sign up</arg>
+<arg>5seconds</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220328 13:48:19.539" endtime="20220328 13:48:19.558"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sign_up_menu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 13:48:19.559" level="INFO">Clicking element '//a[@id="signin2"]'.</msg>
+<status status="PASS" starttime="20220328 13:48:19.558" endtime="20220328 13:48:19.630"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:19.538" endtime="20220328 13:48:19.631"/>
+</kw>
+<kw name="Input Username" library="registerKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${username_txtbox}</arg>
+<arg>5seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220328 13:48:19.633" endtime="20220328 13:48:19.910"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_txtbox}</arg>
+<arg>ganjar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220328 13:48:19.911" level="INFO">Typing text 'ganjar' into text field '//input[@id="sign-username"]'.</msg>
+<status status="PASS" starttime="20220328 13:48:19.911" endtime="20220328 13:48:20.037"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:19.632" endtime="20220328 13:48:20.037"/>
+</kw>
+<kw name="Input Password" library="registerKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${password_txtbox}</arg>
+<arg>5seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220328 13:48:20.040" endtime="20220328 13:48:20.075"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_txtbox}</arg>
+<arg>ganjar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220328 13:48:20.077" level="INFO">Typing text 'ganjar' into text field '//input[@id="sign-password"]'.</msg>
+<status status="PASS" starttime="20220328 13:48:20.076" endtime="20220328 13:48:20.201"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:20.039" endtime="20220328 13:48:20.201"/>
+</kw>
+<kw name="Click Sign Up Button" library="registerKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${sign_up_button}</arg>
+<arg>5seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220328 13:48:20.202" endtime="20220328 13:48:20.232"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sign_up_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220328 13:48:20.232" level="INFO">Clicking element '//button[@onclick="register()"]'.</msg>
+<status status="PASS" starttime="20220328 13:48:20.232" endtime="20220328 13:48:20.291"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:20.202" endtime="20220328 13:48:20.291"/>
+</kw>
+<kw name="Confirm already exist Alert Present" library="registerKeywords">
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>This user already exist.</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20220328 13:48:20.293" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20220328 13:48:20.293" endtime="20220328 13:48:20.810"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:20.292" endtime="20220328 13:48:20.810"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220328 13:48:20.812" endtime="20220328 13:48:23.044"/>
+</kw>
+<status status="PASS" starttime="20220328 13:48:14.352" endtime="20220328 13:48:23.045"/>
+</test>
+<doc>Register Feature Test</doc>
+<status status="PASS" starttime="20220328 13:47:48.496" endtime="20220328 13:48:23.049"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="registerTest">registerTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

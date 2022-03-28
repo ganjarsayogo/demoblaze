@@ -1,0 +1,6 @@
+login_menu:       //a[@id="login2"]
+username_txtbox:  //input[@id="loginusername"]
+password_txtbox:  //input[@id="loginpassword"]
+login_button:     //button[@onclick="logIn()"]
+close_button:     (//button[@class="btn btn-secondary"])[3]
+success_login:    //a[@id="nameofuser"]

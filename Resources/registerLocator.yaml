@@ -1,0 +1,5 @@
+sign_up_menu:     //a[@id="signin2"]
+username_txtbox:  //input[@id="sign-username"]
+password_txtbox:  //input[@id="sign-password"]
+sign_up_button:   //button[@onclick="register()"]
+close_button:     (//button[@class="btn btn-secondary"])[2]
